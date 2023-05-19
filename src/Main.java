@@ -22,7 +22,7 @@ public class Main {
         if (num == 1) {
             return 1;
         }
-
+        //The recursion part
         return num*fact(num-1);
     }
 }
