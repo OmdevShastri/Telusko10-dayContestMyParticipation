@@ -11,16 +11,16 @@ public class Fibonacci {
         System.out.println("Enter a position in the fibo series:  ");
         int pos= sc.nextInt();
 
-        int result =fib(pos);
-        System.out.println("Non-recursion");
-        System.out.println(result);
+//        int result =fib(pos);
+//        System.out.println("Non-recursion");
+//        System.out.println(result);
 
         //calling recursion method
-        System.out.println("Using recursion");
-        System.out.println(fibRec(pos));
+//        System.out.println("Using recursion");
+//        System.out.println(fibRec(pos));
 
         //calling recursion with Cache method
-        System.out.println("Using recursion with Cache method");
+        System.out.println("Using recursion with HashMap method");
         System.out.println(fibRecCache(pos));
     }
     public static int fib(int pos){
