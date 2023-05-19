@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/TeluskoCompetionMyContribution.iml" filepath="$PROJECT_DIR$/TeluskoCompetionMyContribution.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TeluskoCompetitionMyContribution.iml" filepath="$PROJECT_DIR$/TeluskoCompetitionMyContribution.iml" />
     </modules>
   </component>
 </project>
