@@ -29,4 +29,14 @@ public class Product {
     public int getWarranty() {
         return warranty;
     }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "name='" + name + '\'' +
+                ", type='" + type + '\'' +
+                ", place='" + place + '\'' +
+                ", warranty=" + warranty +
+                '}';
+    }
 }
