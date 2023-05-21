@@ -28,10 +28,34 @@ public class ProductService {
             String name = p.getName().toLowerCase();
             String type = p.getType().toLowerCase();
             String place = p.getPlace().toLowerCase();
-            if (name.contains(text) || type.contains(text) || place.contains(text)){
+            if (name.contains(str) || type.contains(str) || place.contains(str)){
                 prods.add(p);
             }
         }
-        return products;
+        return prods;
+    }
+
+    public List<Product> getProductInaPlace(String placeT) {
+        String str = placeT.toLowerCase();
+        List<Product> prods = new ArrayList<>();
+        for (Product p :
+                products) {
+            String place = p.getPlace().toLowerCase();
+            if (place.contains(str)){
+                prods.add(p);
+            }
+        }
+        return prods;
+    }
+
+    public List<Product> getProductOutWarranty(int warr) {
+        List<Product> prods = new ArrayList<>();
+        for (Product p :
+                products) {
+            if (warr == p.getWarranty() || warr> p.getWarranty()){
+                prods.add(p);
+            }
+        }
+        return prods;
     }
 }
