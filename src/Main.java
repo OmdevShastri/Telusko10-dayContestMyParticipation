@@ -36,23 +36,21 @@ public class Main {
 //        System.out.println("====================================");
 //        System.out.println("a particular text");
 
-//        List<Product> prods = service.getProductWithText("black");
-//        System.out.println("Products having text");
-//        for (Product product : prods) {
-//            System.out.println(product);
-//        }
+        List<Product> prods = service.getProductWithText("black");
+        System.out.println("Products having text");
+        prods.stream()
+                .forEach(p -> System.out.println(p));
 
-        List<Product> prods1 = service.getProductInaPlace("Black Table");
-        System.out.println("Products In a particular place");
-        for (Product product : prods1) {
-            System.out.println(product);
-        }
-//
+//        List<Product> prods1 = service.getProductInaPlace("Black Table");
+//        System.out.println("Products In a particular place");
+//        prods1.stream()
+//                .forEach(p -> System.out.println(p));
+
 //        List<Product> prods2 = service.getProductOutWarranty(2023);
 //        System.out.println("Products out of warranty");
-//        for (Product product : prods2) {
-//            System.out.println(product);
-//        }
+//        prods2.stream()
+//                .forEach(p -> System.out.println(p));
+
     }
 
 }
