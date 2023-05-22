@@ -18,12 +18,6 @@ public class PascalsTriangle {
 
 
     }
-    public static int fact(int a){
-        if(a==0){
-            return 1;
-        }
-        return (a * fact(a-1));
-    }
 
     //The common iterative way
     public static void printPascIterative(int n){
@@ -43,7 +37,14 @@ public class PascalsTriangle {
         }
     }
 
-    //my way of doing things
+    public static int fact(int a){
+        if(a==0){
+            return 1;
+        }
+        return (a * fact(a-1));
+    }
+
+    //my way of doing things, using binomial formula
     public static void printPasc(int n) {
         //rows
         for (int i = 0; i < n; i++) {
@@ -91,12 +92,10 @@ public class PascalsTriangle {
     public static void printPascMemoization(int n) {
         //rows
         for (int i = 0; i < n; i++) {
-
             //spaces
             for (int j = 0; j <= n - i; j++) {
                 System.out.print(" ");
             }
-
             //nums
             for (int j = 0; j <= i; j++) {
                 System.out.print(pascalCalcMemoization(i, j) + " ");
@@ -109,11 +108,9 @@ public class PascalsTriangle {
         if (j == 0 || j == i) {
             return 1;
         }
-
         if (cache.containsKey(i+j)) {
             return cache.get(i+j);
         }
-
         int result = pascalCalc(i - 1, j - 1) + pascalCalc(i - 1, j);
         cache.put(i-j, result);
 
