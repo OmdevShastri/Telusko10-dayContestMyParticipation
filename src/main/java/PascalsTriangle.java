@@ -36,6 +36,28 @@ public class PascalsTriangle {
             System.out.println();
         }
     }
+    //Using recursion to solve the problem
+    public static void printPascRecursive(int n) {
+        //rows
+        for (int i = 0; i < n; i++) {
+            //spaces
+            for (int j = 0; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+            //nums printing
+            for (int j = 0; j <= i; j++) {
+                System.out.print(pascalCalc(i, j) + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    //calculating the pascal values for the triangle pattern
+    public static int pascalCalc(int i, int j){
+        if (j == 0 || j == i) {
+            return 1;}
+        return pascalCalc(i - 1, j - 1) + pascalCalc(i - 1, j);
+    }
 
     public static int fact(int a){
         if(a==0){
@@ -60,32 +82,6 @@ public class PascalsTriangle {
             }
             System.out.println();
         }
-    }
-
-    //Using recursion to solve the problem
-    public static void printPascRecursive(int n) {
-        //rows
-        for (int i = 0; i < n; i++) {
-
-            //spaces
-            for (int j = 0; j <= n - i; j++) {
-                System.out.print(" ");
-            }
-
-            //nums printing
-            for (int j = 0; j <= i; j++) {
-                System.out.print(pascalCalc(i, j) + " ");
-            }
-            System.out.println();
-        }
-    }
-
-    //calculating the pascal values for the triangle pattern
-    public static int pascalCalc(int i, int j){
-        if (j == 0 || j == i) {
-            return 1;
-        }
-            return pascalCalc(i - 1, j - 1) + pascalCalc(i - 1, j);
     }
 
     //Using memoization to optimize for efficiency
