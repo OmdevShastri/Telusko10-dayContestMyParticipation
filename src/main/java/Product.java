@@ -30,6 +30,22 @@ public class Product {
         return warranty;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public void setPlace(String place) {
+        this.place = place;
+    }
+
+    public void setWarranty(int warranty) {
+        this.warranty = warranty;
+    }
+
     @Override
     public String toString() {
         return "Product{" +
